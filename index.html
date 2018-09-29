@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="shortcut icon" href="sl.ico" type="image/x-icon">
+	<title>Webflix.</title>
+	<meta name="author" content="Soumya Lahiri" />
+	<meta name="description" content="fullPage fixed header and footer." />
+	<meta name="keywords"  content="fullpage,jquery,demo,screen,fixed, header,footer, absolute, positioned,css" />
+	<meta name="Resource-type" content="Document" />
+
+
+	<link rel="stylesheet" type="text/css" href="dist/fullpage.css" />
+	<link rel="stylesheet" type="text/css" href="examples.css" />
+	<link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Open+Sans:300,400,600,700|Montserrat:900,800,700,600|PT+Sans:700|Ubuntu:500|Assistant:700|Noto+Sans:700" rel="stylesheet">
+	<style>
+
+	/* Style for our header texts
+	* --------------------------------------- */
+	h1{
+		font-size: 5em;
+		font-family: arial,helvetica;
+		color: #fff;
+		margin:0;
+		padding:0;
+	}
+	.intro p{
+		color: #fff;
+	}
+
+	/* Centered texts in each section
+	* --------------------------------------- */
+	.section{
+		text-align:center;
+	}
+
+	/* Fixed header and footer.
+	* --------------------------------------- */
+	#header, #footer{
+		position:fixed;
+		height: 50px;
+		display:block;
+		width: 100%;
+		z-index:9;
+		text-align:center;
+		color: #f2f2f2;
+		padding: 20px 0 0 0;
+	}
+
+	#header{
+		top:0px;
+	}
+	#footer{
+		bottom:0px;
+	}
+
+
+	/* Bottom menu
+	* --------------------------------------- */
+	#infoMenu {
+		bottom: 80px;
+	}
+	#infoMenu li a {
+		color: #fff;
+		z-index: 999;
+	}
+	#ccards
+{
+    text-align: center;
+}
+div.card1x
+{
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 8px 8px 8px 8px;
+  transition: 1s ease;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  display: inline;
+  width: 10vw;
+  height: 10vh;
+  padding-top: 5vh;
+  padding-left: 7vh;
+  padding-right: 5vh;
+}
+.colorsc1
+{
+	width: 70%;
+	height: 1vh;
+	background-color: #BE85E9;
+	margin: auto;
+	border-radius: 4px 4px 4px 4px;
+}
+.colorsc2
+{
+	width: 70%;
+	height: 1vh;
+	background-color: rgb(2, 204, 186);
+	margin: auto;
+	border-radius: 4px 4px 4px 4px;
+}
+.colorsc3
+{
+	width: 70%;
+	height: 1vh;
+	background-color: rgb(255, 84, 131);
+	margin: auto;
+	border-radius: 4px 4px 4px 4px;
+}
+.colorsc4
+{
+	width: 70%;
+	height: 1vh;
+	background-color: rgb(236, 201, 23);
+	margin: auto;
+	border-radius: 4px 4px 4px 4px;
+}
+.toplink:link
+{
+	text-decoration: none;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+	font-size: 0.9rem;
+	color: #000;
+}
+a:hover .card
+	{
+        box-shadow: 0.2em 0.2em 0.3em #CCCCCC;
+	}
+#rx3{
+		text-decoration: none;
+		color: #191919;
+		text-shadow: 0.05em 0.05em 0.1em #EEEEEE;
+	}
+div.rs5 
+	{
+		border-radius: 0.5em 0.5em 0em 0em;
+		background: 
+		linear-gradient(
+			rgba(169,81,237,.5), 
+			rgba(169,81,237,.5)
+						),
+		url(3.jpg);
+		background-repeat: no-repeat;
+		background-size: 100%;
+	}
+a:hover div.rcornersx
+	{
+		-moz-box-shadow: 0.2em 0.2em 0.3em #CCCCCC;
+		-webkit-box-shadow: 0.2em 0.2em 0.3em #CCCCCC;
+        box-shadow: 0.2em 0.2em 0.3em #CCCCCC;
+	}
+div.rcornersx
+	{
+		border-radius: 0.5em;
+		padding: 0em; 
+		width: 15em;
+		height: 13vh;    
+		background: #FFFFFF;
+		box-shadow: 0.4em 0.4em 1em #B7B7B7;
+		display: inline-block;
+		transition: box-shadow 0.4s ease-in-out;
+		text-align: center;
+	}
+#rs2 
+	{
+		font-family: 'Open Sans';
+		font-weight: 300;
+		font-size: 1.4rem;
+		display: inline-block;
+		text-align: left;
+		text-decoration: none;
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+	}
+#rs3 
+	{
+		margin-left: 1.5rem;
+		vertical-align: bottom;
+		text-align: left;
+		text-decoration: none;
+	}
+#rs4 
+	{
+		width: 10rem;
+	}
+	</style>
+
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+</head>
+<body>
+
+<div id="header">
+	<div id="block_container">
+    	<div id="bloc1">WEBFLIX.</div>  
+    	<div id="bloc2">
+    		<a class="btn active" href="#P1">HOME</a>
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    		<a class="btn" href="#P2">TRENDING</a>
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    		<a class="btn" href="#P3">CATEGORIES</a>
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    		<a class="btn" href="#P4">PLAYLIST</a>
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    		<a class="btn" href="#P5">CONTACT</a>
+    	</div>
+	</div>
+</div>
+
+<div id="fullpage">
+	<div class="section " id="section0">
+		<div class="intro">
+				<!--<div class="s1">VIDEOS AND MORE</div>-->
+				<div class="s2">Welcome to Webflix</div>
+				<div class="s3">Please select a category you'd like to watch.</div>
+				<br><br>
+				<a href="#P3" id="rx3">
+					<div class="rcornersx">
+						<span id="rs2">
+							Gaming
+						</span>
+						<div class="colorsc1"></div>
+					</div>
+				</a>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="#P3/1" id="rx3">
+					<div class="rcornersx">
+						<span id="rs2">
+							Music
+						</span>
+						<div class="colorsc2"></div>
+					</div>
+				</a>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="#P3/2" id="rx3">
+					<div class="rcornersx">
+						<span id="rs2">
+							Sports
+						</span>
+						<div class="colorsc3"></div>
+					</div>
+				</a>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="#P3/3" id="rx3">
+					<div class="rcornersx">
+						<span id="rs2">
+							News
+						</span>
+						<div class="colorsc4"></div>
+					</div>
+				</a>
+		</div>
+	</div>
+	<div class="section " id="sectionx">
+		<div class="intro">
+			<div class="s1">TOP OF THE CHARTS ON YOUTUBE</div>
+			<div class="s2">Trending Now</div>
+			<div class="s3">Watch YouTube&apos;s most popular videos right here.</div>
+			<iframe width="400" height="225" src="https://www.youtube.com/embed/8F2FgO4qiDs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="box-shadow: 0 8px 16px 8px rgba(0, 0, 0, 0.2), 0 6px 8px 0 rgba(0, 0, 0, 0.19);"></iframe>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<iframe width="400" height="225" src="https://www.youtube.com/embed/jKyXUJceZ6k" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="box-shadow: 0 8px 16px 8px rgba(0, 0, 0, 0.2), 0 6px 8px 0 rgba(0, 0, 0, 0.19);"></iframe>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<iframe width="400" height="225" src="https://www.youtube.com/embed/Z1BCujX3pw8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="box-shadow: 0 8px 16px 8px rgba(0, 0, 0, 0.2), 0 6px 8px 0 rgba(0, 0, 0, 0.19);"></iframe>
+		</div>
+	</div>
+	<div class="section" id="section1">
+	    <div class="slide" id="slide1">
+			<div class="intro">
+				<div class="s1">BEST OF GAMING ON YOUTUBE</div>
+				<div class="s2">Gaming</div>
+				<div class="s3">Watch YouTube&apos;s most popular gaming videos right here.</div>
+				<iframe width="400" height="225" src="https://www.youtube.com/embed/3VLZqkx--l4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="box-shadow: 0 8px 16px 8px rgba(0, 0, 0, 0.2), 0 6px 8px 0 rgba(0, 0, 0, 0.19);"></iframe>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<iframe width="400" height="225" src="https://www.youtube.com/embed/ngOAyPPM-jc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="box-shadow: 0 8px 16px 8px rgba(0, 0, 0, 0.2), 0 6px 8px 0 rgba(0, 0, 0, 0.19);"></iframe>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<iframe width="400" height="225" src="https://www.youtube.com/embed/G_N1OQmKUkQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="box-shadow: 0 8px 16px 8px rgba(0, 0, 0, 0.2), 0 6px 8px 0 rgba(0, 0, 0, 0.19);"></iframe>
+			</div>
+		</div>
+
+	    <div class="slide" id="slide2">
+	    	<div class="s1">BEST OF MUSIC ON YOUTUBE</div>
+			<div class="s2">Music</div>
+			<div class="s3">Watch YouTube&apos;s most popular music videos right here.</div>
+			<iframe width="400" height="225" style="box-shadow: 0 8px 16px 8px rgba(0, 0, 0, 0.2), 0 6px 8px 0 rgba(0, 0, 0, 0.19);" src="https://www.youtube.com/embed/DylzGXE_ibU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<iframe width="400" height="225" style="box-shadow: 0 8px 16px 8px rgba(0, 0, 0, 0.2), 0 6px 8px 0 rgba(0, 0, 0, 0.19);" src="https://www.youtube.com/embed/aJOTlE1K90k" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<iframe width="400" height="225" style="box-shadow: 0 8px 16px 8px rgba(0, 0, 0, 0.2), 0 6px 8px 0 rgba(0, 0, 0, 0.19);" src="https://www.youtube.com/embed/pgN-vvVVxMA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		</div>
+
+		<div class="slide" id="slide3">
+			<div class="s1">BEST OF SPORTS ON YOUTUBE</div>
+			<div class="s2">Sports</div>
+			<div class="s3">Watch YouTube&apos;s most popular sports videos right here.</div>
+			<iframe width="400" height="225" style="box-shadow: 0 8px 16px 8px rgba(0, 0, 0, 0.2), 0 6px 8px 0 rgba(0, 0, 0, 0.19);" src="https://www.youtube.com/embed/v0FojhntO_4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<iframe width="400" height="225" style="box-shadow: 0 8px 16px 8px rgba(0, 0, 0, 0.2), 0 6px 8px 0 rgba(0, 0, 0, 0.19);" src="https://www.youtube.com/embed/X4quXDeFyhk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<iframe width="400" height="225" style="box-shadow: 0 8px 16px 8px rgba(0, 0, 0, 0.2), 0 6px 8px 0 rgba(0, 0, 0, 0.19);" src="https://www.youtube.com/embed/kqHGHozsXgM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		</div>
+
+		<div class="slide" id="slide4">
+			<div class="s1">MOST IMPORTANT NEWS ON YOUTUBE</div>
+			<div class="s2">News</div>
+			<div class="s3">Watch YouTube&apos;s most important news videos right here.</div>
+			<iframe width="400" height="225" style="box-shadow: 0 8px 16px 8px rgba(0, 0, 0, 0.2), 0 6px 8px 0 rgba(0, 0, 0, 0.19);" src="https://www.youtube.com/embed/SX841r3sjsE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<iframe width="400" height="225" style="box-shadow: 0 8px 16px 8px rgba(0, 0, 0, 0.2), 0 6px 8px 0 rgba(0, 0, 0, 0.19);" src="https://www.youtube.com/embed/Vw9DdilCXP4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<iframe width="400" height="225" style="box-shadow: 0 8px 16px 8px rgba(0, 0, 0, 0.2), 0 6px 8px 0 rgba(0, 0, 0, 0.19);" src="https://www.youtube.com/embed/_GaqPDrOzTQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		</div>
+
+	</div>
+	<div class="section" id="section3">
+		<div class="intro">
+			<div class="s1">TOP OF THE CHARTS ON YOUTUBE</div>
+			<div class="s2">Top Playlists</div>
+			<div class="s3">Watch YouTube&apos;s most popular playlists right here.</div>
+			<iframe width="400" height="225" style="box-shadow: 0 8px 16px 8px rgba(0, 0, 0, 0.2), 0 6px 8px 0 rgba(0, 0, 0, 0.19);" src="https://www.youtube.com/embed/gnHCw87Enq4?list=PLTHOlLMWEwVy52FUngq91krMkQDQBagYw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<iframe width="400" height="225" src="https://www.youtube.com/embed/ANEpNH2GiUQ?list=PL3tRBEVW0hiBzIOB97URaYILQdNCMZnvn" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen ></iframe>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<iframe width="400" height="225" src="https://www.youtube.com/embed/sGCKnuKH5dQ?list=PLAzrgbu8gEMIIK3r4Se1dOZWSZzUSadfZ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="box-shadow: 0 8px 16px 8px rgba(0, 0, 0, 0.2), 0 6px 8px 0 rgba(0, 0, 0, 0.19);"></iframe>
+		</div>
+	</div>
+	<div class="section" id="section2">
+		<div class="intro">
+			<div class="s5">GET IN TOUCH</div>
+			<div class="s2">Contact Us</div>
+			<div class="s3">Webflix, your new video partner.</div>
+			<a href="https://www.facebook.com" target="_blank"><img src="fb.png" width="50vw"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="https://www.twitter.com" target="_blank"><img src="tw.png" width="50vw"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="https://www.linkedin.com" target="_blank"><img src="in.png" width="50vw"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="https://www.instagram.com" target="_blank"><img src="ig.png" width="50vw"></a>
+			<div class="s4">WRITE TO US AT</div>
+			<div class="s3">say@soumyalahiri.com</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="dist/fullpage.js"></script>
+<script type="text/javascript" src="examples.js"></script>
+
+<script type="text/javascript">
+    var myFullpage = new fullpage('#fullpage', {
+        anchors: ['P1', 'P2', 'P3', 'P4', 'P5'],
+        sectionsColor: ['#fff', '#fff', '#fff', '#fff', '#fff'],
+        css3: true
+    });
+</script>
+<script>
+// Add active class to the current button (highlight it)
+var header = document.getElementById("bloc2");
+var btns = header.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+</body>
+</html>
